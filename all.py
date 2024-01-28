@@ -24,29 +24,50 @@ def scrape_tv_data(url):
     page_number = 1
     while True:
         # Find the TV elements based on the HTML structure
-        tv_elements = driver.find_elements(By.CSS_SELECTOR, '.product__content')  # Adjust CSS selector based on the actual HTML structure
+        # tv_elements = driver.find_elements(By.CSS_SELECTOR, '.product__content')  # Adjust CSS selector based on the actual HTML structure
         
-        # Extract the name and price information
-        for tv_element in tv_elements:
-            name = tv_element.find_element(By.CSS_SELECTOR, '.product__description').text.strip()
-            price = tv_element.find_element(By.CSS_SELECTOR, '.product__title').text.strip()
+        # # Extract the name and price information
+        # for tv_element in tv_elements:
+        #     name = tv_element.find_element(By.CSS_SELECTOR, '.product__description').text.strip()
+        #     price = tv_element.find_element(By.CSS_SELECTOR, '.product__title').text.strip()
 
-            all_tv_data.append({'name': name, 'price': price})
+        #     all_tv_data.append({'name': name, 'price': price})
 
         # Check if there is a next page
         try:
+            tv_elements = driver.find_elements(By.CSS_SELECTOR, '.product__content')  # Adjust CSS selector based on the actual HTML structure
+        
+            # Extract the name and price information
+            for tv_element in tv_elements:
+                name = tv_element.find_element(By.CSS_SELECTOR, '.product__description').text.strip()
+                price = tv_element.find_element(By.CSS_SELECTOR, '.product__title').text.strip()
+
+                all_tv_data.append({'name': name, 'price': price})
+
             print(page_number)
-            next_page_link = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.PARTIAL_LINK_TEXT, f' {page_number} ')))
-            next_page_link.click()
+            next_page_link = WebDriverWait(driver, 1000).until(
+                # EC.presence_of_element_located((By.PARTIAL_LINK_TEXT, f'{page_number + 1}'))
+                # EC.element_to_be_clickable((By.PARTIAL_LINK_TEXT, f'{page_number + 1}'))
+                EC.presence_of_element_located((By.XPATH, f'//a[@href="/c_tv-dvd-equipment?page={page_number + 1}"]'))
+
+            )
+            driver.execute_script("arguments[0].scrollIntoView(true);", next_page_link)
+
+            # next_page_link.click()
+            driver.execute_script("arguments[0].click();", next_page_link)
+
             page_number += 1
-        except:
-            # print()
+            if page_number == 5:
+                break
+            
+        except Exception as e:
+            print(f"An error occurred: {e}")
             break  # Exit the loop if there is no next page or an error occurs
 
     driver.quit()
 
     tv_df = pd.DataFrame(all_tv_data)
-    tv_df.to_csv('all.csv', index=False)
+    tv_df.to_csv('tv.csv', index=False)
     return all_tv_data
 
 # Example URL (replace with the actual URL of the webpage containing TV information)

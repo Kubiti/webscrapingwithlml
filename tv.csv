@@ -1,2 +1,15 @@
-Brand,Model,Type,Screen Size,Display Technology,Condition,name,price
-TCL,43A5400A,TVs,43 inches,LED,Brand New,Quality TCL 43inch Smart Android Tv(43A5400A),"GH₵ 3,299"
+Brand,Model,Type,Screen Size,Display Technology,Condition,name,price,Display Type,Exchange Possible,Display Resolution,TV Operation System,Refresh Rate
+TCL,43D3200,TVs,43 inches,LED,Brand New,Triluminos FHD Tough Satellite Display Digital 43D3200 TCL,"GH₵ 2,799",,,,,
+Nasco,32,TVs,32 inches,LED,Brand New,"TV TV Sart Control TV 1080P HDMI 32tv "" Digital Satellighttv",GH₵ 891,Matte,No,,,
+Nasco,,TVs,,,Brand New,Fresh Nasco 32 Inches Digital TV,GH₵ 899,,,,,
+TCL,65S635,TVs,65 inches,LED,Brand New,Victory 65inch TCL Android FHD UHD TV,"GH₵ 7,499",,No,2160p (4K),Google TV,
+LG,OLED65C1PVB,TVs,65 inches,OLED,Brand New,LG OLED TV 65 C1cinema Screen Design Cinema HDR Webos Smart,"GH₵ 26,899",Glossy,Yes,2160p (4K),Smart TV (own system),120 Hz
+Other,SY-08,TVs,32 inches,LED,Brand New,Newly Asano 32 Inches TV (Smart Miracast),"GH₵ 1,299",Glossy,,2160p (4K),,
+Other,Ds2,TVs,32 inches,CRT,Brand New,Asano Android Smart LED TV – 32 Wireless,"GH₵ 1,449",,,2160p (4K),,120 Hz
+Nasco,Nas43,TVs,43 inches,LED,Brand New,Nas43_nasco 43inches Digital Satellite TV,"GH₵ 2,490",Matte,No,1080p (FullHD),Without Smart TV,120 Hz
+Sony,sony,TVs,50 inches,LED,Used,55”Sony Android TV,"GH₵ 5,500",,,2160p (4K),Android TV,
+Samsung,65Au7092,TVs,65 inches,LED,Brand New,"Samsung LED TV Latest 65, Smart, Ultra HD, Class F","GH₵ 10,999",Glossy,No,2160p (4K),Tizen,
+LG,OLED55CXVA,TVs,55 inches,OLED,Brand New,LG CX 55 Inch Α9 Gen 3 AI Processor Class Smart OLED TV,"GH₵ 15,998",Glossy,No,2160p (4K),Smart TV (own system),120 Hz
+Other,,TVs,50 inches,OLED,Brand New,Roch 50inches Television Set,"GH₵ 1,899",,,1440p (2K),,
+Nasco,,TVs,,,Brand New,55inches Nasco Uhd 4k Tv Digital Satellite – NAS-T,"GH₵ 2,599",,,,,
+TCL,43S5400A,TVs,43 inches,LED,Brand New,Sealed In Box TCL(43S5400A)43inch 4k HDR Google Tv Black),"GH₵ 3,199",,,,,

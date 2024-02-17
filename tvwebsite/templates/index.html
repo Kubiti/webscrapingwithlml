@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <title>Predict TV Price</title>
+</head>
+
+<body>
+    <h1>Television Price Prediction</h1>
+
+    <form action="{% url 'result' %}">
+        {% csrf_token %}
+        <p>Please fill in the values for the TV attributes</p>
+        <label for="brand">Brand:</label>
+        <select name="brand" id="brand" required>
+            <option value="">Please Choose a Brand</option>
+            <option value="AILYONS">AILYONS</option>
+            <option value="AKAI">AKAI</option>
+            <option value="ASANO">ASANO</option>
+            <option value="BANANA TV">BANANA TV</option>
+            <option value="BRUHM">BRUHM</option>
+            <option value="GLOBAL STAR">GLOBAL STAR</option>
+            <option value="HAIER">HAIER</option>
+            <option value="HITACHI">HITACHI</option>
+            <option value="INNOVA">INNOVA</option>
+            <option value="ITEL">ITEL</option>
+            <option value="LG">LG</option>
+            <option value="NASCO">NASCO</option>
+            <option value="OTHER">OTHER</option>
+            <option value="PEARL">PEARL</option>
+            <option value="PROTECH">PROTECH</option>
+            <option value="ROCH">ROCH</option>
+            <option value="SAMSUNG">SAMSUNG</option>
+            <option value="SHARP">SHARP</option>
+            <option value="SKYWORTH">SKYWORTH</option>
+            <option value="SMART">SMART</option>
+            <option value="SMECO">SMECO</option>
+            <option value="SONY">SONY</option>
+            <option value="SUN KING">SUN KING</option>
+            <option value="SUNNY WALKS">SUNNY WALKS</option>
+            <option value="SYINIX">SYINIX</option>
+            <option value="TCL">TCL</option>
+            <option value="TOSHIBA">TOSHIBA</option>
+            <option value="XIAOMI">XIAOMI</option>
+            <option value="ZARA">ZARA</option>
+            <option value="ZEG">ZEG</option>
+            <option value="ZUM">ZUM</option>
+        </select>
+
+        <br>
+        <label for="size">Screen Size (Inches):</label>
+        <input type="number" name="size" id="size" min="20" max="130" required>
+
+        <br>
+        <label for="disp">Display Technology</label>
+        <select name="disp" id="disp" required>
+            <option value="">Please Choose the Display Technology</option>
+            <option value="CRT">CRT</option>
+            <option value="LED">LED</option>
+            <option value="OLED">OLED</option>
+            <option value="PLASMA">Plasma</option>
+            <option value="QLED">QLED</option>
+        </select>
+
+        <br>
+        <label for="condition">Condition</label>
+        <select name="condition" id="condition" required>
+            <option value="">Please Select the Television Condition</option>
+            <option value="Brand New">Brand New</option>
+            <option value="Used">Used</option>
+        </select>
+
+        <br>
+        <input type="submit" value="Get Prediction">
+    </form>
+</body>
+
+</html>

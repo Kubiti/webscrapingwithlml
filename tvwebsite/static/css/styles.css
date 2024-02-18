@@ -3,9 +3,10 @@
 /* Body styles */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: auto;
     padding: 0;
     background-color: #f2f2f2;
+    max-width: 50%;
 }
 
 /* Container styles */
@@ -17,10 +18,10 @@ body {
 
 /* Heading styles */
 h1 {
-    font-size: 24px;
+    font-size: 2rem;
     color: #333;
     text-align: center;
-    margin: 0 auto;
+    margin: 1em auto 0;
 }
 
 
@@ -31,6 +32,8 @@ form {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: 10vw auto;
 }
 
 /* Label styles */
@@ -38,6 +41,8 @@ label {
     display: block;
     margin-bottom: 8px;
 }
+
+
 
 /* Input and select styles */
 input[type="number"],
@@ -70,4 +75,31 @@ input[type="submit"]:hover {
 .error-message {
     color: #ff0000;
     margin-top: 5px;
+}
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1300px) {
+    form {
+        width: 70%; /* Adjust width for smaller screens */
+        margin: 5vw auto; /* Adjust margin for smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    form {
+        width: 80%; /* Adjust width for smaller screens */
+        margin: 5vw auto; /* Adjust margin for smaller screens */
+    }
+}
+
+/* Media query for even smaller screens */
+@media screen and (max-width: 480px) {
+    form {
+        width: 95%; /* Adjust width for even smaller screens */
+        margin: 3vw auto; /* Adjust margin for even smaller screens */
+    }
+    body {
+        max-width: 90%;
+    }
 }

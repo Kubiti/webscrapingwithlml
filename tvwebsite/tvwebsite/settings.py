@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-8gwc+-8o-a1%9sqasabr$&l6uw*lp!7$kyi2ml(^l1i1%o_!z=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tvmodel.onrender.com', '127.0.0.1', 'localhost']
 
 
 # Application definition

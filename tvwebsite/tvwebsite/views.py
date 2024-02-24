@@ -11,7 +11,7 @@ def getPrediction(brand, size, disp, condition):
     import pandas as pd
     model = pickle.load(open("model.sav", "rb"))
 
-    x_point = {'Brand': brand, 'Screen Size': size, 'Display Technology': disp, 'Condition': condition}
+    x_point = {'Brand': brand, 'Screen Size': int(size), 'Display Technology': disp, 'Condition': condition}
     x_df = pd.DataFrame([x_point])
 
     prediction = model.predict(x_df)

@@ -23,10 +23,10 @@ def getPrediction(brand, size, disp, condition):
 # result page view
 def result(request):
     brand = request.GET['brand']
-    size = int(request.GET['size'])
+    size = request.GET['size']
     disp = request.GET['disp']
     condition = request.GET['condition']
 
-    result = round(getPrediction(brand, size, disp, condition)[0], 2)
+    result = round(getPrediction(brand, int(size), disp, condition)[0], 2)
     
     return render(request, 'result.html', {'result': result})
